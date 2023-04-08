@@ -12,8 +12,8 @@ driver = webdriver.Firefox(service=services)
 
 driver.fullscreen_window()  # esto hace grande la pantalla
 
-# busca en el buscador por defecto de neustro navegador
-driver.get("https://start.garudalinux.org/")
+# nos redirecciona a el sitio pasado como argumento al paarmetro tal de tipo strgin y una vez abierto nuestro navegador atravz del dirver correspondiente al navegador usado,
+driver.get("https://start.garudalinux.org/") 
 sleep(1)
 
 
@@ -30,8 +30,8 @@ def init_render(button_redirect: dict) -> None:
 
 def clik_redirect_to(path_button_redirect: str, time_sleep: int = 3) -> None:
     user_use = driver.find_element(by=By.XPATH, value=path_button_redirect)
-    user_use.click()  # se usara 3 veces x cada redireccion de la pagina
-    sleep(time_sleep)  # espera que la pagina cargue
+    user_use.click()
+    sleep(time_sleep)
 
 
 iter_select_button_redirect = dict(
